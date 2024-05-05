@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <style>
+       body {
+            background-image: url('bg1.png'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 30%; 
+            margin: 60px auto; 
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); 
+            border-radius: 10px;
+        }
+        table {
+    border-collapse: collapse;
+    width: 100%; 
+    margin-bottom: 10px;
+}
+
+
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #C7B299;
+        }
+        input[type="text"], input[type="tel"], select {
+            width: calc(100% - 16px);
+            padding: 6px 10px;
+            margin: 4px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        #add-row {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ffc5cd;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #add-row:hover {
+            background-color: #ffc5cd;
+        }
+        button[type="submit"]:hover {
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color: #C7B299; text-align: center;">Appointment Booking</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="name[]" class="form-control name"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="color: #C7B299;">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="address[]" class="form-control address"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="color: #C7B299;">Contact Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="tel" name="contact[]" class="form-control contact"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="color: #C7B299;">Services</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <select name="product[]" class="form-control product">
+                            <option value="" selected disabled>Select Services</option>
+                            <option value="Product A">Hair</option>
+                            <option value="Product B">Nails</option>
+                            <option value="Product C">Spa</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="submit">Submit Appointment</button>
+    </div>
+</body>
+</html>
